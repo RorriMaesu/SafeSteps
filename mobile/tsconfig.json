@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react",
+    "target": "es2017",
+    "moduleResolution": "node",
+  "types": ["jest", "react", "react-native", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/screens/*": ["src/screens/*"],
+      "@/services/*": ["src/services/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types": ["src/types"]
+    }
+  },
+  "include": ["src", "*.ts", "*.tsx"],
+  "exclude": ["node_modules"]
+}

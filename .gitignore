@@ -1,0 +1,14 @@
+node_modules/
+.expo/
+dist/
+/.env
+/mobile/.env
+**/.env
+**/*.env
+*.keystore
+keystore.properties
+**/google-services.json
+**/local.properties
+**/.gradle/
+**/build/
+**/outputs/
