@@ -42,3 +42,22 @@ GOOGLE_MAPS_API_KEY=YOUR_ANDROID_MAPS_KEY
 
 Rebuild the app; Gradle injects it into the manifest via `${GOOGLE_MAPS_API_KEY}`.
 If you previously ran a native build, clean and rebuild the Android project to pick up the change.
+
+## Firebase setup (google-services.json)
+
+Firebase powers Google Sign-In and notifications.
+
+1) Create/Select Firebase project: https://console.firebase.google.com/
+2) Add Android app:
+	- Package name: `com.safesteps.app`
+	- SHA-1: use the script `../infrastructure/scripts/print-android-signing.ps1` from the repo root to print the Debug SHA-1.
+3) Download the generated `google-services.json` and place it at:
+	- `mobile/android/app/google-services.json`
+	(This file is intentionally gitignored.)
+4) Enable Google provider in Firebase Authentication (Sign-in method) and copy the "Web client ID" into repo `.env`:
+
+```
+GOOGLE_WEB_CLIENT_ID=YOUR_WEB_CLIENT_ID
+```
+
+5) Rebuild Android after adding the file/env var.

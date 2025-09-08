@@ -263,9 +263,11 @@ dependencies {
         implementation jscFlavor
     }
 
-    // Firebase (Auth via BOM)
-    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    // Firebase (via BoM)
+    implementation platform('com.google.firebase:firebase-bom:34.2.0')
     implementation 'com.google.firebase:firebase-auth'
+    // Optional: analytics baseline (safe to include; no versions when using BoM)
+    implementation 'com.google.firebase:firebase-analytics'
 }
 
 if (rnVersion < versionToNumber(0, 75, 0)) {
